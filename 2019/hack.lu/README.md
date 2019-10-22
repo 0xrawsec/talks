@@ -89,12 +89,11 @@ It is strongly advised to apply this methodology on a VM
 1. Set up WHIDS so that it logs everything going through (option: `log-all`). Depending on how you want to work, you can make WHIDS forward the logs to a remote machine. Optional: you can also set the dump `mode` option to empty string if you don't want dumps to be created while you are developing rules. 
 2. Reboot the machine to take the change into account
 3. Optional: setup your working environment (shared drives, tools ...)
-4. Snapshot the VM
+4. **Snapshot the VM**
 5. Run the malware / technique you want to study
 6. Dump the logs 
 7. Develop the rules with the help of Gene. It's good to keep the traces you have worked on somewhere on your disk so that you can eventually rework on your rules later on.
 8. Select your next target and revert to snapshot made in step 4
-
 
 #### Exercise 2.1: Malware
 
