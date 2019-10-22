@@ -1,2 +1,2 @@
 # talks
-Repository of my public talks
+Repository of public talks
