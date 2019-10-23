@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import argparse
 import json
@@ -23,7 +23,7 @@ class Query(object):
             # guid normalization
             guid = "{{{0}}}".format(guid.strip("{}"))
             if len(guid) != 38:
-                logger.error("Bad guid length for: {0}".format(guid))
+                logger.error("Bad guid length for: {0}".format(guid))
                 continue
             self.guids.add(guid)
     

@@ -1,0 +1,92 @@
+{
+  "Name": "DummyRegexRule",
+  "Tags": [],
+  "Meta": {
+    "EventIDs": [1],
+    "Channels": ["Microsoft-Windows-Sysmon/Operational"],
+    "Computers": [],
+    "ATTACK": [
+      {
+        "ID": "",
+        "Tactic": "",
+        "Reference": ""
+      }
+    ],
+    "Criticality": 10,
+    "Disable": false
+  },
+  "Matches": [
+	"$test: Image ~= '(?i:wininit)'"
+],
+  "Condition": "$test"
+}
+
+{
+  "Name": "DummyEqualRule",
+  "Tags": [],
+  "Meta": {
+    "EventIDs": [1],
+    "Channels": ["Microsoft-Windows-Sysmon/Operational"],
+    "Computers": [],
+    "ATTACK": [
+      {
+        "ID": "",
+        "Tactic": "",
+        "Reference": ""
+      }
+    ],
+    "Criticality": 10,
+    "Disable": false
+  },
+  "Matches": [
+	"$test: Image = 'C:\\Windows\\System32\\wininit.exe'"
+],
+  "Condition": "$test"
+}
+
+{
+  "Name": "DummyTestFlagOperatorRule",
+  "Tags": [],
+  "Meta": {
+    "EventIDs": [1],
+    "Channels": ["Microsoft-Windows-Sysmon/Operational"],
+    "Computers": [],
+    "ATTACK": [
+      {
+        "ID": "",
+        "Tactic": "",
+        "Reference": ""
+      }
+    ],
+    "Criticality": 10,
+    "Disable": false,
+    "Comments": "Very handy for ProcessAcess events"
+  },
+  "Matches": [
+	"$test: LogonId &= '0xe7'"
+],
+  "Condition": "$test"
+}
+
+{
+  "Name": "DummyTestIndirectMatch",
+  "Tags": [],
+  "Meta": {
+    "EventIDs": [1],
+    "Channels": ["Microsoft-Windows-Sysmon/Operational"],
+    "Computers": [],
+    "ATTACK": [
+      {
+        "ID": "",
+        "Tactic": "",
+        "Reference": ""
+      }
+    ],
+    "Criticality": 10,
+    "Disable": false,
+  },
+  "Matches": [
+  "$test: User = @ParentUser"
+],
+  "Condition": "!$test"
+}
