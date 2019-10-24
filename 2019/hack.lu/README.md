@@ -3,8 +3,8 @@
 ## Outline
 
 1. Introduction to WHIDS
-2. WHIDS Installation and feature exploration
-3. Writing rules: methodology and practical exercises
+2. Writing rules: methodology and practical exercises
+3. WHIDS Installation and feature exploration
 4. Putting everything together: one case study of your choice will be given to you and the objective will be to write your own rule(s)
 
 The workshop will be in four parts, trying to put the focus on hands-on.
