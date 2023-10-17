@@ -1,0 +1,35 @@
+{
+    "Name": "SimpleRule1",
+    "Meta": {
+        "LogType": "kunai",
+        "Events": {
+            "kunai": [
+                1
+            ]
+        },
+        "Criticality": 3,
+        "Schema": "2.0.0"
+    },
+    "Matches": [
+        "$a: command_line ~= 'ls -hail'",
+        "$b: /data/exe/file = '/bin/ls'"
+    ],
+    "Condition": "$a or $b"
+}
+{
+    "Name": "SimpleRule2",
+    "Meta": {
+        "Events": {
+            "kunai": [
+                1
+            ]
+        },
+        "Criticality": 7,
+        "Schema": "2.0.0"
+    },
+    "Matches": [
+        "$a: exe/file = '/bin/ls'",
+        "$b: /data/exe/file = '/usr/bin/ls'"
+    ],
+    "Condition": "$a or $b"
+}
